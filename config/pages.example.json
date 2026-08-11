@@ -1,0 +1,11 @@
+{
+  "viewport": {"width": 1280, "height": 720},
+  "pages": [
+    {"name": "landing", "url": "https://example.com/landing", "full_page": true},
+    {"name": "studio", "url": "https://example.com/studio", "full_page": true},
+    {"name": "studio_playlist", "url": "https://example.com/studio/playlist", "full_page": true},
+    {"name": "reviews", "url": "https://example.com/community/reviews", "full_page": true},
+    {"name": "docs", "url": "https://example.com/docs", "full_page": true}
+  ]
+}
+

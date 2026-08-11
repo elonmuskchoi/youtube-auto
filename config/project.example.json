@@ -1,0 +1,23 @@
+{
+  "project_name": "ai-music-playlist",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "subtitle_safe_height": 110,
+  "voice_speed": 1.15,
+  "font": "C:/Windows/Fonts/NotoSansKR-VF.ttf",
+  "landing_url": "https://example.com/landing",
+  "studio_urls": [
+    "https://example.com/studio",
+    "https://example.com/studio/playlist"
+  ],
+  "proof_intervals": [27, 183, 190, 197, 204],
+  "cta_interval": [91, 103],
+  "avatar": {
+    "enabled": true,
+    "size": 230,
+    "x": 1005,
+    "y": 335
+  }
+}
+
