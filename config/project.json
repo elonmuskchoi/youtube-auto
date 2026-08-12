@@ -1,22 +1,15 @@
 {
-  "project_name": "mcp-auto-playlist-studio",
+  "project_name": "mcp-auto-playlist-final-v3",
   "width": 1280,
   "height": 720,
   "fps": 24,
+  "duration": 322.52,
   "subtitle_safe_height": 110,
-  "voice_speed": 1.15,
-  "font": "C:/Windows/Fonts/NotoSansKR-VF.ttf",
-  "landing_url": "https://mcp-auto.dev/",
-  "studio_urls": [
-    "https://mcp-auto.dev/studio/pli",
-    "https://mcp-auto.dev/studio"
-  ],
-  "proof_intervals": [27, 183, 190, 197, 204],
-  "cta_interval": [91, 103],
-  "avatar": {
-    "enabled": true,
-    "size": 230,
-    "x": 1005,
-    "y": 335
-  }
+  "typecast": {"voice": "필재", "tempo": 1.15, "model": "ssfm-v30", "language": "kor"},
+  "heygen": {"avatar_look_id": "97d9eddcd53845a6b4e33a8c626665b3", "motion_engine": "Avatar III", "premium_engine": false},
+  "avatar_layout": {"shape": "circle", "size": 230, "x": 1005, "y": 365},
+  "subtitle": {"verbatim": true, "timing": "Typecast word timestamps", "max_characters": 22, "max_duration": 2.65},
+  "cta_intervals": [[43, 68], [280, 322.52]],
+  "proof_intervals": [[198, 207], [207, 216]],
+  "studio_urls": ["https://mcp-auto.dev/studio/pli", "https://mcp-auto.dev/studio"]
 }

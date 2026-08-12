@@ -1,13 +1,21 @@
 {
-  "duration": 276.05,
+  "version": "final-v3",
+  "duration": 322.52,
+  "caption_source": "audio/word-timings-long-v3.json",
+  "cta_intervals": [[43, 68], [280, 322.52]],
+  "proof_intervals": [[198, 207], [207, 216]],
   "scenes": [
-    {"start": 0, "end": 12, "type": "landing_scroll", "asset": "landing-full.png", "purpose": "opening hook"},
-    {"start": 27, "end": 33, "type": "proof", "asset": "income_01.png", "purpose": "early revenue credibility"},
-    {"start": 46, "end": 83, "type": "page_demo", "asset": "landing-full.png", "purpose": "problem and workflow"},
-    {"start": 91, "end": 103, "type": "dynamic_cta", "asset": "landing-full.png", "copy": "무료 비법서 받아가세요"},
-    {"start": 125, "end": 183, "type": "studio_demo", "asset": "studio-playlist.png", "purpose": "actual workflow"},
-    {"start": 183, "end": 210, "type": "proof_sequence", "asset": "authorized proof set", "purpose": "revenue and testimonials"},
-    {"start": 213, "end": 249, "type": "studio_demo", "asset": "studio-playlist.png", "purpose": "steps and output"},
-    {"start": 249, "end": 276.05, "type": "ai_visual", "asset": "ai-system-12.png", "purpose": "final CTA"}
-  ]
+    {"start": 0, "end": 20, "type": "page_scroll", "asset": "studio.png"},
+    {"start": 20, "end": 43, "type": "page_scroll", "asset": "studio_playlist.png"},
+    {"start": 43, "end": 68, "type": "dynamic_cta", "asset": "cta-dynamic-master.mp4", "purpose": "early expectation CTA"},
+    {"start": 68, "end": 176, "type": "page_scroll", "asset": "studio_playlist.png"},
+    {"start": 176, "end": 198, "type": "page_scroll", "asset": "product.png"},
+    {"start": 198, "end": 207, "type": "proof", "asset": "proof_01.png", "purpose": "revenue claim evidence"},
+    {"start": 207, "end": 216, "type": "proof", "asset": "proof_02.png", "purpose": "revenue claim evidence"},
+    {"start": 216, "end": 238, "type": "page_scroll", "asset": "community_reviews.png"},
+    {"start": 238, "end": 265, "type": "page_scroll", "asset": "studio_playlist.png"},
+    {"start": 265, "end": 280, "type": "page_scroll", "asset": "offer_four_pack.png"},
+    {"start": 280, "end": 322.52, "type": "dynamic_cta", "asset": "cta-dynamic-master.mp4", "purpose": "final fixed-comment CTA"}
+  ],
+  "avatar": {"start": 0, "end": 322.52, "shape": "circle", "size": 230, "x": 1005, "y": 365}
 }

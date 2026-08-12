@@ -2,6 +2,8 @@
 
 Reusable production kit for Korean long-form YouTube explainers built from real product pages, AI-generated editorial visuals, synchronized captions, proof screenshots, dynamic CTAs, and a circular presenter avatar.
 
+For the exact 2026-08-12 final-v3 workflow, use [docs/FINAL_V3_RUNBOOK.md](docs/FINAL_V3_RUNBOOK.md), `config/final-v3-inputs.json`, and `scripts/preflight_final_v3.ps1`. Private media and API keys are deliberately not stored in Git.
+
 This repository documents the production method used for a 4 minute 36 second AI-music playlist explainer. It contains no API keys, private testimonials, copyrighted benchmark footage, or final customer media.
 
 ## What this pipeline does

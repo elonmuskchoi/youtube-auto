@@ -1,0 +1,13 @@
+{
+  "version": "2026-08-12-2308-kst",
+  "required_private_files": [
+    {"path": "audio/narration-long-v3.wav", "sha256_reference": "004bb62ee20114475b0df9e58a36c439477c7278d892bb1093a2e320b3a8230b"},
+    {"path": "audio/word-timings-long-v3.json", "description": "Typecast word-level timestamps"},
+    {"path": "work/heygen-avatar-iii-typecast-v3-full.mp4", "sha256_reference": "aa78bb7297ac158b1f28db0018dc04d2301e5987fd1916f2796218faabedd4bb"},
+    {"path": "outputs/cta-dynamic-master.mp4", "sha256_reference": "50aaff29b383844cf61b84955f398aa174074f221d309da4d4755d2b5461fe3a"},
+    {"path": "work/proofs/proof_01.png", "description": "authorized and privacy-safe proof card"},
+    {"path": "work/proofs/proof_02.png", "description": "authorized and privacy-safe proof card"}
+  ],
+  "required_captures": ["studio.png", "studio_playlist.png", "product.png", "offer_four_pack.png", "community_reviews.png", "home.png"],
+  "final_output": "outputs/youtube-auto-final-v3-avatar3-typecast.mp4"
+}

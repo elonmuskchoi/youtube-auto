@@ -7,7 +7,7 @@ FFMPEG = ROOT / "work/ffmpeg/ffmpeg-9.0-essentials_build/bin/ffmpeg.exe"
 BASE = ROOT / "work/base-long-v3-noavatar.mp4"
 CTA = ROOT / "outputs/cta-dynamic-master.mp4"
 AVATAR = ROOT / "work/heygen-avatar-iii-typecast-v3-full.mp4"
-OUTPUT = ROOT.parent / "outputs/youtube-auto-final-v3-avatar3-typecast.mp4"
+OUTPUT = ROOT / "outputs/youtube-auto-final-v3-avatar3-typecast.mp4"
 
 
 FILTER = r"""
