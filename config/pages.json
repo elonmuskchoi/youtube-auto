@@ -1,0 +1,19 @@
+{
+  "viewport": {"width": 1280, "height": 720},
+  "pages": [
+    {"name": "studio_playlist", "url": "https://mcp-auto.dev/studio/pli", "full_page": true},
+    {"name": "studio", "url": "https://mcp-auto.dev/studio", "full_page": true},
+    {"name": "home", "url": "https://mcp-auto.dev/", "full_page": true},
+    {"name": "product", "url": "https://mcp-auto.dev/product", "full_page": true},
+    {"name": "offer_four_pack", "url": "https://mcp-auto.dev/offer/four-pack", "full_page": true},
+    {"name": "login", "url": "https://mcp-auto.dev/login", "full_page": true},
+    {"name": "my", "url": "https://mcp-auto.dev/my", "full_page": true},
+    {"name": "onboard", "url": "https://mcp-auto.dev/onboard", "full_page": true},
+    {"name": "community", "url": "https://mcp-auto.dev/community", "full_page": true},
+    {"name": "community_board", "url": "https://mcp-auto.dev/community/board", "full_page": true},
+    {"name": "community_column", "url": "https://mcp-auto.dev/community/column", "full_page": true},
+    {"name": "community_notice", "url": "https://mcp-auto.dev/community/notice", "full_page": true},
+    {"name": "community_qna", "url": "https://mcp-auto.dev/community/qna", "full_page": true},
+    {"name": "community_reviews", "url": "https://mcp-auto.dev/community/reviews", "full_page": true}
+  ]
+}

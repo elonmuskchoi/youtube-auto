@@ -1,0 +1,13 @@
+{
+  "duration": 276.05,
+  "scenes": [
+    {"start": 0, "end": 12, "type": "landing_scroll", "asset": "landing-full.png", "purpose": "opening hook"},
+    {"start": 27, "end": 33, "type": "proof", "asset": "income_01.png", "purpose": "early revenue credibility"},
+    {"start": 46, "end": 83, "type": "page_demo", "asset": "landing-full.png", "purpose": "problem and workflow"},
+    {"start": 91, "end": 103, "type": "dynamic_cta", "asset": "landing-full.png", "copy": "무료 비법서 받아가세요"},
+    {"start": 125, "end": 183, "type": "studio_demo", "asset": "studio-playlist.png", "purpose": "actual workflow"},
+    {"start": 183, "end": 210, "type": "proof_sequence", "asset": "authorized proof set", "purpose": "revenue and testimonials"},
+    {"start": 213, "end": 249, "type": "studio_demo", "asset": "studio-playlist.png", "purpose": "steps and output"},
+    {"start": 249, "end": 276.05, "type": "ai_visual", "asset": "ai-system-12.png", "purpose": "final CTA"}
+  ]
+}
