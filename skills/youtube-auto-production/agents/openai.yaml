@@ -1,0 +1,4 @@
+interface:
+  display_name: "YouTube Auto Production"
+  short_description: "최종 v3 영상·HTML 슬라이드 제작 파이프라인"
+  default_prompt: "Use $youtube-auto-production to produce a synced AI monetization video and its dynamic HTML slide deck."
