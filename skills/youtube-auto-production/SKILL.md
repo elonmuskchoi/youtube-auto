@@ -19,6 +19,7 @@ Preserve the repository pipeline. Read `references/final-production-spec.md`, th
 
 1. Confirm the minimum inputs: topic, audience, URLs, CTA offer, fixed-comment wording, authorized proofs, Typecast voice, and HeyGen avatar look.
 2. Write a long-form Korean narration matching the established energetic explanatory style. Include an expectation CTA near the opening and a final CTA.
+   - Before locking it, study at least three verified 100K+ long-form videos on the same topic. Extract only structural patterns: thumbnail promise, first-30-second hook, proof placement, curiosity loops, objection handling, and CTA transition. Never copy sentences, footage, music, or a creator's distinctive sequence.
 3. Lock the narration before visual editing.
 4. Generate the final Typecast Filjae audio first. Preserve word timestamps; treat this audio as the master clock.
 5. Upload the completed audio file to HeyGen. Use saved look `97d9eddcd53845a6b4e33a8c626665b3` with standard **Avatar III**, not a premium Avatar IV/V engine. Never create the avatar from pasted narration text.
@@ -27,6 +28,7 @@ Preserve the repository pipeline. Read `references/final-production-spec.md`, th
 8. Keep the moving avatar in a fixed 230×230 circular mask at the lower-right. Keep captions verbatim in the reserved bottom safe area.
 9. Preserve GIF and MP4 CTA sources as motion. Use the early expectation CTA and final fixed-comment CTA.
 10. Run preflight, render, and inspect representative opening, CTA, proof, Studio, subtitle, and ending frames.
+11. Build an explicit sound cue sheet. Use restrained licensed SFX for hook impacts, UI clicks, proof reveals, scroll transitions, CTA pops, and the final resolve. Duck SFX under narration and keep provider attribution/license records.
 
 ## Build the companion HTML slide deck
 

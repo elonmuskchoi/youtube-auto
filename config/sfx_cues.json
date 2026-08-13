@@ -1,0 +1,16 @@
+{
+  "version": "final-v3-sfx-1",
+  "mix_rule": "SFX는 내레이션보다 8~14 dB 낮게 유지",
+  "cues": [
+    {"time": 0.15, "asset": "cinematic-impact.mp3", "gain": 0.18, "purpose": "opening result reveal"},
+    {"time": 3.2, "asset": "soft-whoosh.mp3", "gain": 0.13, "purpose": "hook text transition"},
+    {"time": 20.0, "asset": "ui-click.mp3", "gain": 0.11, "purpose": "studio interaction"},
+    {"time": 43.0, "asset": "soft-pop.mp3", "gain": 0.13, "purpose": "early CTA reveal"},
+    {"time": 68.0, "asset": "soft-whoosh.mp3", "gain": 0.12, "purpose": "return to studio"},
+    {"time": 176.0, "asset": "ui-click.mp3", "gain": 0.10, "purpose": "product section"},
+    {"time": 198.0, "asset": "success-chime.mp3", "gain": 0.12, "purpose": "proof reveal"},
+    {"time": 216.0, "asset": "page-swipe.mp3", "gain": 0.11, "purpose": "review scroll"},
+    {"time": 265.0, "asset": "soft-whoosh.mp3", "gain": 0.11, "purpose": "offer transition"},
+    {"time": 280.0, "asset": "soft-pop.mp3", "gain": 0.13, "purpose": "final CTA reveal"}
+  ]
+}

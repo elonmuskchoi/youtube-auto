@@ -20,6 +20,25 @@
 - Final CTA reference window: 280 seconds through the end
 - For new narration, relocate these sections by semantic word-timestamp cues rather than copying absolute times
 
+## 100K+ long-form structure
+
+- Verify the public view count immediately before using a reference; record the URL and capture date.
+- Thumbnail: one concrete outcome + one mechanism + one curiosity gap, using 2–3 short text blocks. Do not promise guaranteed income.
+- 0–5 seconds: state the surprising change or result and show moving proof/UI immediately.
+- 5–15 seconds: contrast the old difficulty with the new AI-assisted mechanism.
+- 15–30 seconds: preview the three payoffs, show one evidence glimpse, and open a curiosity loop for the final resource CTA.
+- Body loop: claim → matching real screen → mechanism → limitation/objection → next question.
+- Place public examples before student proof. Label estimates and distinguish general AI-automation outcomes from playlist-only revenue.
+- Resolve the early curiosity loop before the final CTA; do not hide the core teaching behind the CTA.
+
+## Motion, captions, and SFX
+
+- Reuse the established house effects: purposeful vertical scroll, cursor movement, selective crop/zoom, browser framing, circular fixed avatar, verbatim word-timed captions, proof reveal, and restrained CTA pop.
+- Do not reproduce another creator's exact shot order, graphics, audio, or caption design. Adapt general retention patterns into the existing house style.
+- Add SFX only at semantic events: opening impact, UI click, page transition, proof reveal, CTA pop, and final resolve.
+- Target SFX peaks roughly 8–14 dB below narration; use short fades and avoid stacking more than two effects.
+- Store source URL, creator, license, download date, and required attribution for every external sound. Never commit API keys.
+
 ## Visual rules
 
 - Match visible pages to the exact spoken subject.
