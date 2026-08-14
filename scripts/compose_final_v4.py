@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 FFMPEG = ROOT / "work/ffmpeg/ffmpeg-9.0-essentials_build/bin/ffmpeg.exe"
 BASE = ROOT / "work/base-long-v4-noavatar.mp4"
-CTA = ROOT / "outputs/cta-dynamic-master-v4.mp4"
+CTA = ROOT / "outputs/cta-motion-no-books-v5.mp4"
 AVATAR = ROOT / "work/heygen-avatar-iii-typecast-v4-long.mp4"
 OUTPUT = ROOT / "outputs/youtube-auto-final-v4-synced-no-music.mp4"
 TIMINGS = ROOT / "audio/word-timings-final-v4-long.json"

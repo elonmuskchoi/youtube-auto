@@ -10,10 +10,11 @@ W, H, FPS = 1280, 720, 24
 CONTENT_H = 610
 FONT_REGULAR = Path(__file__).resolve().parents[1] / "work/fonts/Pretendard-Regular.otf"
 FONT_SEMIBOLD = Path(__file__).resolve().parents[1] / "work/fonts/Pretendard-SemiBold.otf"
+FONT_BOLD = Path(__file__).resolve().parents[1] / "work/fonts/Pretendard-Bold.otf"
 
 
-def font(size: int, semibold: bool = False):
-    path = FONT_SEMIBOLD if semibold and FONT_SEMIBOLD.exists() else FONT_REGULAR
+def font(size: int, semibold: bool = False, bold: bool = False):
+    path = FONT_BOLD if bold and FONT_BOLD.exists() else (FONT_SEMIBOLD if semibold and FONT_SEMIBOLD.exists() else FONT_REGULAR)
     if not path.exists():
         path = Path(r"C:\Windows\Fonts\NotoSansKR-VF.ttf")
     return ImageFont.truetype(str(path), size)
@@ -36,6 +37,42 @@ def contain(image: Image.Image):
     resized = image.resize((round(image.width * scale), round(image.height * scale)), Image.Resampling.LANCZOS)
     canvas = Image.new("RGB", (W, CONTENT_H), (5, 7, 12))
     canvas.paste(resized, ((W - resized.width) // 2, (CONTENT_H - resized.height) // 2))
+    return canvas
+
+
+def slide_frame(name: str, progress: float):
+    """Minimal motion-graphic inserts for narration without a matching product screen."""
+    dark = name == "rights"
+    bg = (10, 16, 28) if dark else (247, 248, 250)
+    fg = (247, 249, 253) if dark else (16, 23, 36)
+    muted = (170, 181, 200) if dark else (91, 102, 120)
+    accent = (77, 125, 255)
+    canvas = Image.new("RGB", (W, CONTENT_H), bg)
+    draw = ImageDraw.Draw(canvas, "RGBA")
+    for x in range(30, W, 34):
+        for y in range(28, CONTENT_H, 34):
+            draw.ellipse((x, y, x + 2, y + 2), fill=(*muted, 22))
+    specs = {
+        "hook": ("AI 음악 수익화의 핵심", "음악 한 곡이 아니라\n오래 듣는 구조입니다", ["청취 상황", "콘셉트 통일", "반복 제작"]),
+        "system": ("플레이리스트가 오래 재생되는 이유", "사람들은 노래보다\n분위기를 오래 소비합니다", ["집중", "카페", "수면·휴식"]),
+        "iterate": ("초보자의 가장 빠른 시작법", "한 가지 상황으로 만들고\n데이터로 다음 영상을 개선", ["첫 영상", "반응 확인", "다음 영상"]),
+        "rights": ("자동화 전에 반드시 확인", "빠른 제작보다\n사용 권리와 정책이 먼저입니다", ["상업 이용 조건", "이미지·폰트 라이선스", "반복 콘텐츠 정책"]),
+    }
+    eyebrow, title, cards = specs[name]
+    enter = ease(min(1, progress * 4))
+    offset = round(24 * (1 - enter))
+    draw.rounded_rectangle((68, 52 + offset, 340, 98 + offset), 22, fill=(*accent, round(255 * enter)))
+    draw.text((204, 75 + offset), eyebrow, font=font(19, semibold=True), fill=(255, 255, 255, round(255 * enter)), anchor="mm")
+    draw.multiline_text((68, 142 + offset), title, font=font(49, bold=True), fill=(*fg, round(255 * enter)), spacing=8)
+    for i, label in enumerate(cards):
+        reveal = ease((progress - 0.12 - i * 0.08) * 5)
+        x = 68 + i * 305
+        y = 402 + round(18 * (1 - reveal))
+        fill = (20, 30, 48, round(245 * reveal)) if dark else (255, 255, 255, round(245 * reveal))
+        outline = (*accent, round(130 * reveal))
+        draw.rounded_rectangle((x, y, x + 282, y + 112), 20, fill=fill, outline=outline, width=2)
+        draw.text((x + 25, y + 25), f"0{i + 1}", font=font(18, bold=True), fill=(*accent, round(255 * reveal)))
+        draw.text((x + 25, y + 62), label, font=font(22, bold=True), fill=(*fg, round(255 * reveal)))
     return canvas
 
 
@@ -74,7 +111,10 @@ def circle_avatar(source: Image.Image, size=230):
 
 def scene_for(time, duration):
     scenes = [
-        (0, 20, "studio", 0.00, 0.28),
+        (0, 18, "slide_hook", 0.00, 1.00),
+        (18, 43, "studio", 0.00, 0.28),
+        (43, 58, "slide_system", 0.00, 1.00),
+        (58, 68, "studio_playlist", 0.20, 0.44),
         (20, 43, "studio_playlist", 0.00, 0.20),
         (43, 68, "studio_playlist", 0.20, 0.44),
         (68, 105, "studio_playlist", 0.10, 0.40),
@@ -83,8 +123,10 @@ def scene_for(time, duration):
         (176, 198, "product", 0.00, 0.82),
         (198, 207, "proof_1", 0, 1),
         (207, 216, "proof_2", 0, 1),
-        (216, 238, "community_reviews", 0.00, 1.00),
-        (238, 265, "studio_playlist", 0.76, 1.00),
+        (216, 222, "community_reviews", 0.00, 0.45),
+        (222, 238, "slide_iterate", 0.00, 1.00),
+        (238, 253, "slide_rights", 0.00, 1.00),
+        (253, 265, "studio_playlist", 0.76, 1.00),
         (265, 280, "offer", 0.00, 0.90),
         (280, duration, "home", 0.00, 1.00),
     ]
@@ -122,7 +164,9 @@ def main(captures: Path, proofs: Path, avatar_path: Path | None, audio: Path,
         time = frame_index / FPS
         start, end, name, crop_start, crop_end = scene_for(time, duration)
         progress = (time - start) / max(0.001, end - start)
-        if name.startswith("proof"):
+        if name.startswith("slide_"):
+            visual = slide_frame(name.removeprefix("slide_"), progress)
+        elif name.startswith("proof"):
             visual = contain(images[name])
         else:
             visual = page_frame(images[name], progress, crop_start, crop_end)
@@ -136,11 +180,8 @@ def main(captures: Path, proofs: Path, avatar_path: Path | None, audio: Path,
         draw.line((0, CONTENT_H, W, CONTENT_H), fill=(52, 60, 78, 255), width=1)
         text = active_caption(cues, time)
         if text:
-            caption_font = font(29, semibold=True)
-            bounds = draw.textbbox((0, 0), text, font=caption_font)
-            box_w = min(W - 80, bounds[2] - bounds[0] + 54)
-            box = (W // 2 - box_w // 2, 635, W // 2 + box_w // 2, 697)
-            draw.rounded_rectangle(box, 18, fill=(12, 15, 22, 218), outline=(255, 255, 255, 30), width=1)
+            caption_font = font(32, bold=True)
+            draw.text((W // 2 + 2, 666 + 3), text, font=caption_font, fill=(0, 0, 0, 150), anchor="mm")
             draw.text((W // 2, 666), text, font=caption_font, fill=(250, 251, 253, 255), anchor="mm")
         if name.startswith("proof"):
             draw.rounded_rectangle((42, 42, 430, 83), 18, fill=(5, 8, 14, 225), outline=(181, 133, 255, 220), width=2)

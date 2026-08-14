@@ -88,6 +88,8 @@
 
 - Use one visual claim per frame. Prefer wide whitespace, one headline, and one proof object over ornamental panels.
 - Alternate `claim card -> matching product screen -> takeaway` to reset attention every 20–35 seconds.
-- Keep captions inside a high-contrast rounded capsule with a modern Korean sans-serif typeface.
+- Default captions use a bold Korean sans-serif without an outline box or decorative border. Use the reserved dark safe area and a subtle shadow for contrast.
 - CTA screens must answer only two questions: what is included, and where to get it. Avoid fake buttons, tiny disclaimers, decorative cursors, and competing headlines.
+- CTA may reuse approved GIF/MP4 sources at their original motion speed. Exclude supplied still-image covers when the brief requests a motion-only CTA.
+- Product-page capture and scrolling remain the primary visual language. Use minimal dynamic information slides only where narration has no directly matching screen.
 - Benchmark general editorial patterns only; never copy another channel's wording, branded graphics, footage, music, or distinctive scene sequence.
