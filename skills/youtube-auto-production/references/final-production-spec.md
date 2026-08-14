@@ -92,4 +92,6 @@
 - CTA screens must answer only two questions: what is included, and where to get it. Avoid fake buttons, tiny disclaimers, decorative cursors, and competing headlines.
 - CTA may reuse approved GIF/MP4 sources at their original motion speed. Exclude supplied still-image covers when the brief requests a motion-only CTA.
 - Product-page capture and scrolling remain the primary visual language. Use minimal dynamic information slides only where narration has no directly matching screen.
+- The first 10 seconds should use a fast product-screen montage (roughly 1.5–2 seconds per shot) with real scrolling or push-in motion before any explanatory slide appears.
+- Use restrained low-gain SFX at visual transitions and key claims throughout the video; increase cue frequency without masking narration.
 - Benchmark general editorial patterns only; never copy another channel's wording, branded graphics, footage, music, or distinctive scene sequence.

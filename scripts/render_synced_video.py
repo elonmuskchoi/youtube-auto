@@ -76,6 +76,33 @@ def slide_frame(name: str, progress: float):
     return canvas
 
 
+def montage_frame(images, time: float):
+    """Fast opening montage built only from real product-page captures."""
+    shots = [
+        ("studio", 0.00, 0.30),
+        ("studio_playlist", 0.00, 0.24),
+        ("studio_playlist", 0.38, 0.62),
+        ("product", 0.00, 0.66),
+        ("studio_playlist", 0.72, 1.00),
+    ]
+    shot_duration = 2.0
+    index = min(len(shots) - 1, int(time / shot_duration))
+    local = (time - index * shot_duration) / shot_duration
+    name, start, end = shots[index]
+    visual = page_frame(images[name], local, start, end)
+    # A small push-in plus a short blue wipe creates pace without hiding the UI.
+    zoom = 1.0 + 0.035 * ease(local)
+    resized = visual.resize((round(W * zoom), round(CONTENT_H * zoom)), Image.Resampling.LANCZOS)
+    left = (resized.width - W) // 2
+    top = (resized.height - CONTENT_H) // 2
+    visual = resized.crop((left, top, left + W, top + CONTENT_H))
+    if local < 0.13 and index > 0:
+        draw = ImageDraw.Draw(visual, "RGBA")
+        wipe = round(W * (1 - local / 0.13))
+        draw.rectangle((0, 0, wipe, CONTENT_H), fill=(60, 105, 245, round(105 * (1 - local / 0.13))))
+    return visual
+
+
 def captions(words):
     cues, current = [], []
     for word in words:
@@ -111,7 +138,8 @@ def circle_avatar(source: Image.Image, size=230):
 
 def scene_for(time, duration):
     scenes = [
-        (0, 18, "slide_hook", 0.00, 1.00),
+        (0, 10, "montage", 0.00, 1.00),
+        (10, 18, "slide_hook", 0.00, 1.00),
         (18, 43, "studio", 0.00, 0.28),
         (43, 58, "slide_system", 0.00, 1.00),
         (58, 68, "studio_playlist", 0.20, 0.44),
@@ -164,7 +192,9 @@ def main(captures: Path, proofs: Path, avatar_path: Path | None, audio: Path,
         time = frame_index / FPS
         start, end, name, crop_start, crop_end = scene_for(time, duration)
         progress = (time - start) / max(0.001, end - start)
-        if name.startswith("slide_"):
+        if name == "montage":
+            visual = montage_frame(images, time)
+        elif name.startswith("slide_"):
             visual = slide_frame(name.removeprefix("slide_"), progress)
         elif name.startswith("proof"):
             visual = contain(images[name])
