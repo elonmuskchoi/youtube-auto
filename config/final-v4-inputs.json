@@ -1,0 +1,21 @@
+{
+  "version": "final-v4",
+  "duration": 302.56,
+  "audio": "audio/narration-final-v4-long.wav",
+  "caption_timings": "audio/word-timings-final-v4-long.json",
+  "avatar_look_id": "97d9eddcd53845a6b4e33a8c626665b3",
+  "avatar_engine": "avatar_iii_general",
+  "avatar_source": "work/heygen-avatar-iii-typecast-v4-long.mp4",
+  "base_video": "work/base-long-v4-noavatar.mp4",
+  "cta_intervals": [[29.5, 41.7], [259.8, 302.56]],
+  "bgm": "audio/bgm-ai-tech-cc0.mp3",
+  "sfx_cues": "config/sfx_cues_v4.json",
+  "final_output": "outputs/youtube-auto-final-v4-avatar3-bgm-sfx.mp4",
+  "audio_order": [
+    "typecast_narration",
+    "heygen_lipsync",
+    "screen_and_caption_composite",
+    "bgm_ducking",
+    "sfx_last_pass"
+  ]
+}

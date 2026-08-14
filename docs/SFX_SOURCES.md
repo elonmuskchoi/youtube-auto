@@ -13,3 +13,9 @@
 
 라이선스: https://creativecommons.org/publicdomain/zero/1.0/
 
+## BGM
+
+- `Ambient Dark Groove Building Electronic Music (Moth Lament)` — SG80_MED1A
+- 출처: https://freesound.org/people/SG80_MED1A/sounds/789401/
+- 라이선스: CC0 1.0
+- 적용: -22 dB 수준의 기본 볼륨과 내레이션 기반 사이드체인 덕킹. 최종 HeyGen 립싱크·화면·자막 합성 이후 마지막 오디오 패스에서만 추가한다.

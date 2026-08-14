@@ -8,11 +8,15 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H, FPS = 1280, 720, 24
 CONTENT_H = 610
-FONT_PATH = r"C:\Windows\Fonts\NotoSansKR-VF.ttf"
+FONT_REGULAR = Path(__file__).resolve().parents[1] / "work/fonts/Pretendard-Regular.otf"
+FONT_SEMIBOLD = Path(__file__).resolve().parents[1] / "work/fonts/Pretendard-SemiBold.otf"
 
 
-def font(size: int):
-    return ImageFont.truetype(FONT_PATH, size)
+def font(size: int, semibold: bool = False):
+    path = FONT_SEMIBOLD if semibold and FONT_SEMIBOLD.exists() else FONT_REGULAR
+    if not path.exists():
+        path = Path(r"C:\Windows\Fonts\NotoSansKR-VF.ttf")
+    return ImageFont.truetype(str(path), size)
 
 
 def ease(value: float) -> float:
@@ -132,8 +136,12 @@ def main(captures: Path, proofs: Path, avatar_path: Path | None, audio: Path,
         draw.line((0, CONTENT_H, W, CONTENT_H), fill=(52, 60, 78, 255), width=1)
         text = active_caption(cues, time)
         if text:
-            draw.text((W // 2 + 2, 666 + 2), text, font=font(28), fill=(0, 0, 0, 220), anchor="mm")
-            draw.text((W // 2, 666), text, font=font(28), fill=(248, 248, 245, 255), anchor="mm")
+            caption_font = font(29, semibold=True)
+            bounds = draw.textbbox((0, 0), text, font=caption_font)
+            box_w = min(W - 80, bounds[2] - bounds[0] + 54)
+            box = (W // 2 - box_w // 2, 635, W // 2 + box_w // 2, 697)
+            draw.rounded_rectangle(box, 18, fill=(12, 15, 22, 218), outline=(255, 255, 255, 30), width=1)
+            draw.text((W // 2, 666), text, font=caption_font, fill=(250, 251, 253, 255), anchor="mm")
         if name.startswith("proof"):
             draw.rounded_rectangle((42, 42, 430, 83), 18, fill=(5, 8, 14, 225), outline=(181, 133, 255, 220), width=2)
             draw.text((236, 62), "제공된 실제 사례 · 개인별 결과 상이", font=font(17), fill=(240, 238, 246), anchor="mm")

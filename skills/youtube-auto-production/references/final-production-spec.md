@@ -75,3 +75,19 @@
 - Never store their values in Git, `.env.example`, documentation, screenshots, commands, or logs.
 - Generated audio/video/images and private proof are ignored by default. Confirm `.gitignore` before staging.
 - Commit on a dedicated branch and push that branch, never silently merge to the default branch.
+
+## Mandatory final audio order
+
+1. Generate the final Typecast narration and word timestamps.
+2. Upload that exact WAV to HeyGen and generate the selected avatar with the general Avatar III engine.
+3. Composite the completed HeyGen avatar over the page footage and render captions from the same Typecast timestamps.
+4. Add licensed BGM only after the lip-sync composite is complete. Use sidechain ducking so narration remains dominant.
+5. Add semantic SFX in the last audio pass. Never render HeyGen from a mix that already contains BGM or SFX.
+
+## Minimal information-video pattern
+
+- Use one visual claim per frame. Prefer wide whitespace, one headline, and one proof object over ornamental panels.
+- Alternate `claim card -> matching product screen -> takeaway` to reset attention every 20–35 seconds.
+- Keep captions inside a high-contrast rounded capsule with a modern Korean sans-serif typeface.
+- CTA screens must answer only two questions: what is included, and where to get it. Avoid fake buttons, tiny disclaimers, decorative cursors, and competing headlines.
+- Benchmark general editorial patterns only; never copy another channel's wording, branded graphics, footage, music, or distinctive scene sequence.

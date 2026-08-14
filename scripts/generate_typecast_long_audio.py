@@ -23,11 +23,15 @@ def chunks(text: str, limit: int = 1800):
     return result
 
 
-def main(script: Path, audio: Path, timings: Path, voice_id: str):
+def main(script: Path, audio: Path, timings: Path, voice_id: str, prepend_script: Path | None = None, skip_paragraphs: int = 0):
     key = os.environ.get("TYPECAST_API_KEY")
     if not key:
         raise SystemExit("TYPECAST_API_KEY is required in the process environment.")
-    parts = chunks(script.read_text(encoding="utf-8").strip())
+    body_paragraphs = [p.strip() for p in script.read_text(encoding="utf-8").split("\n\n") if p.strip()]
+    body = "\n\n".join(body_paragraphs[skip_paragraphs:])
+    if prepend_script:
+        body = prepend_script.read_text(encoding="utf-8").strip() + "\n\n" + body
+    parts = chunks(body.strip())
     pcm_parts, words, offset = [], [], 0.0
     params = None
     for index, text in enumerate(parts, 1):
@@ -68,5 +72,7 @@ if __name__ == "__main__":
     parser.add_argument("--audio", type=Path, required=True)
     parser.add_argument("--timings", type=Path, required=True)
     parser.add_argument("--voice-id", required=True)
+    parser.add_argument("--prepend-script", type=Path)
+    parser.add_argument("--skip-paragraphs", type=int, default=0)
     args = parser.parse_args()
-    main(args.script, args.audio, args.timings, args.voice_id)
+    main(args.script, args.audio, args.timings, args.voice_id, args.prepend_script, args.skip_paragraphs)
