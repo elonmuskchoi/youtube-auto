@@ -94,4 +94,8 @@
 - Product-page capture and scrolling remain the primary visual language. Use minimal dynamic information slides only where narration has no directly matching screen.
 - The first 10 seconds should use a fast product-screen montage (roughly 1.5–2 seconds per shot) with real scrolling or push-in motion before any explanatory slide appears.
 - Use restrained low-gain SFX at visual transitions and key claims throughout the video; increase cue frequency without masking narration.
+- Public evidence blocks use three consistent cards with channel view evidence and explicit third-party estimate disclaimers. Student evidence blocks use three anonymized `baseline -> repeat -> result record` cards.
+- Avoid bright flashes and repeated blinking. Prefer short navy slide veils, restrained dissolves, and gentle horizontal transitions.
+- Hide the avatar temporarily when it would cover CTA or evidence text; restore the fixed bottom-right circle immediately afterward.
+- Prepare at least two thumbnail candidates and three title candidates, then test one variable at a time against click-through rate and first-30-second retention.
 - Benchmark general editorial patterns only; never copy another channel's wording, branded graphics, footage, music, or distinctive scene sequence.

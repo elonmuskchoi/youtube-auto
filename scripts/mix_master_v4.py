@@ -18,7 +18,8 @@ def main():
 
     filters = [
         "[0:a]aresample=48000,volume=1.0[voice]",
-        "[1:a]aresample=48000,volume=0.075,afade=t=in:st=0:d=2[bgm]",
+        "[1:a]aresample=48000,volume='if(lt(t,10),0.095,if(between(t,160,216),0.055,if(gt(t,259),0.09,0.075)))':eval=frame,"
+        "equalizer=f=2500:t=q:w=1:g=-3:enable='between(t,160,216)',afade=t=in:st=0:d=2[bgm]",
         "[bgm][voice]sidechaincompress=threshold=0.012:ratio=10:attack=18:release=550:makeup=1[ducked]",
     ]
     labels = ["[voice]", "[ducked]"]
@@ -40,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

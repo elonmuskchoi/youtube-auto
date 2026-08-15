@@ -22,7 +22,7 @@ def main():
         "[3:v]fps=24,crop=650:650:635:150,scale=230:230,format=rgba,"
         "geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':a='if(lte(hypot(X-W/2,Y-H/2),W/2-4),255,0)'[avatar_circle];"
         "[with_cta][avatar_circle]overlay=1005:365:"
-        f"enable='not(between(t,29.5,41.7)+between(t,259.8,{duration}))':"
+        f"enable='not(between(t,29.5,41.7)+between(t,160,216)+between(t,259.8,{duration}))':"
         "eof_action=pass[vout]"
     )
     command = [
