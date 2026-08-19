@@ -10,6 +10,10 @@ reproduction specification remains in
 [docs/FINAL_V3_RUNBOOK.md](docs/FINAL_V3_RUNBOOK.md). Private media and API keys
 are deliberately not stored in Git.
 
+The current 4–5 minute release profile is named **V9 Longform Master**. See
+[docs/V9_LONGFORM_MASTER.md](docs/V9_LONGFORM_MASTER.md) for its fixed rules and
+build command.
+
 This repository documents the production method used for a 4 minute 36 second AI-music playlist explainer. It contains no API keys, private testimonials, copyrighted benchmark footage, or final customer media.
 
 ## What this pipeline does
