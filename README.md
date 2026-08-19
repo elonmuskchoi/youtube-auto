@@ -10,9 +10,14 @@ reproduction specification remains in
 [docs/FINAL_V3_RUNBOOK.md](docs/FINAL_V3_RUNBOOK.md). Private media and API keys
 are deliberately not stored in Git.
 
-The current 4–5 minute release profile is named **V9 Longform Master**. See
-[docs/V9_LONGFORM_MASTER.md](docs/V9_LONGFORM_MASTER.md) for its fixed rules and
-build command.
+The current release profile is **V10 Positive Playlist Longform**. It uses
+Typecast Filjae audio as the master clock, a standard HeyGen Avatar III presenter,
+verbatim captions, two CTAs, proof-aligned visuals, and a final BGM/SFX pass. See
+[docs/V10_VIDEO_BUILD.md](docs/V10_VIDEO_BUILD.md) and
+[docs/PORTABLE_PRODUCTION_GUIDE.md](docs/PORTABLE_PRODUCTION_GUIDE.md).
+
+The current thumbnail pair and reusable prompts are documented in
+[docs/V10_THUMBNAIL_AB.md](docs/V10_THUMBNAIL_AB.md).
 
 This repository documents the production method used for a 4 minute 36 second AI-music playlist explainer. It contains no API keys, private testimonials, copyrighted benchmark footage, or final customer media.
 

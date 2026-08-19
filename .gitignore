@@ -17,6 +17,9 @@ assets/landing/*
 !assets/landing/README.md
 assets/generated/*
 !assets/generated/README.md
+assets/thumbnails/*
+!assets/thumbnails/v10-thumbnail-a.png
+!assets/thumbnails/v10-thumbnail-b.png
 work/
 *.mov
 *.mp4
@@ -28,4 +31,6 @@ work/
 *.jpeg
 *.webp
 *.log
+!assets/thumbnails/v10-thumbnail-a.png
+!assets/thumbnails/v10-thumbnail-b.png
 

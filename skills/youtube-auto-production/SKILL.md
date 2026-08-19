@@ -1,6 +1,6 @@
 ---
 name: youtube-auto-production
-description: Reproduce and extend the youtube-auto final v3 workflow for Korean AI-monetization videos and companion dynamic HTML slide decks. Use when Codex must plan, script, capture web pages, generate Typecast-first narration, create a HeyGen Avatar III presenter from uploaded audio, synchronize verbatim captions, place revenue proof and two CTAs, composite the final video, build interactive slides, or deploy the slides to Vercel without changing the established production style.
+description: Reproduce and extend the youtube-auto V10 workflow for Korean AI-monetization videos, A/B thumbnails, and companion dynamic HTML slide decks. Use when Codex must plan, script, capture web pages, generate Typecast-first narration, create a HeyGen Avatar III presenter from uploaded audio, synchronize verbatim captions, place revenue proof and two CTAs, composite the final video, prepare thumbnails, build interactive slides, or deploy the slides without changing the established production style.
 ---
 
 # YouTube Auto Production
@@ -30,6 +30,15 @@ Preserve the repository pipeline. Read `references/final-production-spec.md`, th
 10. Run preflight, render, and inspect representative opening, CTA, proof, Studio, subtitle, and ending frames.
 11. Build an explicit sound cue sheet. Use restrained licensed SFX for hook impacts, UI clicks, proof reveals, scroll transitions, CTA pops, and the final resolve. Duck SFX under narration and keep provider attribution/license records.
 
+## Prepare A/B thumbnails
+
+1. Read `references/thumbnail-production.md` before generating thumbnails.
+2. Derive two different hypotheses from the locked narration: A emphasizes the attainable outcome; B emphasizes the repeatable mechanism. Do not create two merely cosmetic variants.
+3. Use GPT Image 2 when an authorized `OPENAI_API_KEY` is available locally. Otherwise use the available image-generation tool and report the actual generator honestly.
+4. Keep exact Korean copy to two short blocks, use a large expressive subject and one visual mechanism, and avoid guaranteed-income claims.
+5. Save the final A/B images under `assets/thumbnails/`, record the exact prompts and title pair, and inspect both at mobile size.
+6. Test one variable at a time. Compare click-through rate and first-30-second retention after enough impressions; do not declare a winner from a tiny sample.
+
 ## Build the companion HTML slide deck
 
 1. Summarize the final video into 16:9 slide scenes rather than transcribing every sentence.
@@ -48,4 +57,4 @@ Preserve the repository pipeline. Read `references/final-production-spec.md`, th
 
 ## Hand off reproducibly
 
-Report the narration, timing source, avatar engine/look, input paths, render command, output paths, QA result, remaining private inputs, deployed URL, branch, commit, and push result. Update the runbook when the approved workflow changes.
+Report the narration, timing source, avatar engine/look, input paths, render command, thumbnail prompts and paths, output paths, QA result, remaining private inputs, deployed URL, branch, commit, and push result. Update the runbook when the approved workflow changes.
