@@ -1,0 +1,34 @@
+{
+  "version": "V10 positive playlist longform",
+  "topic": "AI 음악·플레이리스트 자동화 수익화",
+  "target_duration_seconds": 300,
+  "actual_duration_seconds": 298.083,
+  "narration_script": "scripts/narration_v10_playlist_variant.txt",
+  "narration_audio": "audio/narration-v10-playlist.wav",
+  "word_timings": "audio/word-timings-v10-playlist.json",
+  "typecast_voice": {
+    "name": "필재",
+    "voice_id": "tc_68257f68bc6e3c161ab5078d"
+  },
+  "heygen": {
+    "avatar_name": "AI빌더",
+    "avatar_look_id": "97d9eddcd53845a6b4e33a8c626665b3",
+    "requested_engine": "Avatar III regular",
+    "source_video": "work/heygen-avatar-iii-typecast-v10.mp4"
+  },
+  "composition": {
+    "aspect_ratio": "16:9",
+    "resolution": "1280x720",
+    "avatar": "fixed circular lower-right",
+    "early_cta_seconds": [22.4, 34.6],
+    "final_cta_start_seconds": 281.2,
+    "subtitles": "verbatim word-timing sync",
+    "audio_order": [
+      "Typecast narration",
+      "HeyGen lip-sync avatar",
+      "visual and subtitle composition",
+      "BGM and SFX final mix"
+    ]
+  },
+  "final_output": "outputs/youtube-auto-v10-avatar3-bgm-sfx.mp4"
+}
