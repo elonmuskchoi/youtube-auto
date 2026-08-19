@@ -2,7 +2,13 @@
 
 Reusable production kit for Korean long-form YouTube explainers built from real product pages, AI-generated editorial visuals, synchronized captions, proof screenshots, dynamic CTAs, and a circular presenter avatar.
 
-For the exact 2026-08-12 final-v3 workflow, use [docs/FINAL_V3_RUNBOOK.md](docs/FINAL_V3_RUNBOOK.md), `config/final-v3-inputs.json`, and `scripts/preflight_final_v3.ps1`. Private media and API keys are deliberately not stored in Git.
+For the current end-to-end method—including the fast opening, synchronized
+Typecast/HeyGen Avatar III presenter, evidence scenes, dynamic CTA, final BGM/SFX
+mix, A/B thumbnails, and V8 companion edit—start with
+[docs/LATEST_WORKFLOW.md](docs/LATEST_WORKFLOW.md). The original locked v3
+reproduction specification remains in
+[docs/FINAL_V3_RUNBOOK.md](docs/FINAL_V3_RUNBOOK.md). Private media and API keys
+are deliberately not stored in Git.
 
 This repository documents the production method used for a 4 minute 36 second AI-music playlist explainer. It contains no API keys, private testimonials, copyrighted benchmark footage, or final customer media.
 
